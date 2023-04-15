@@ -1,3 +1,4 @@
+
 var items = JSON.parse(localStorage.getItem("items")) || [];
 var inputField = document.getElementById("inputField");
 
@@ -9,6 +10,7 @@ function updateItemsList() {
         listItem.textContent = item.text;
         listItem.classList.add("item");
         listItem.dataset.itemId = index;
+        listItem.addEventListener("click", selectItem);
         itemsList.appendChild(listItem);
     });
 }
@@ -85,4 +87,3 @@ document.getElementById("addButton").addEventListener("click", addItem);
 document.getElementById("editButton").addEventListener("click", editItem);
 document.getElementById("deleteButton").addEventListener("click", deleteItem);
 document.getElementById("saveButton").addEventListener("click", saveItem);
-document.getElementById("itemsList").addEventListener("click", selectItem);
