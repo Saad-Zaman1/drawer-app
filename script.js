@@ -16,11 +16,14 @@ function updateItemsList() {
 }
 
 function openDrawer() {
-    document.getElementById("drawer").style.width = "300px";
+    document.getElementById("openButton").style.display='none'
+    document.getElementById("drawer").style.width = "400px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    
 }
 
 function closeDrawer() {
+    document.getElementById("openButton").style.display='block'
     document.getElementById("drawer").style.width = "0";
     document.body.style.backgroundColor = "#f0f0f0";
 }
