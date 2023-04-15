@@ -1,49 +1,98 @@
+
 body {
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+.open-button {
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.open-button:hover {
+    background-color: #0056b3;
 }
 
 .drawer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    overflow-x: hidden;
-    transition: width 0.3s ease-in-out;
+    min-width: 0;
+    overflow: hidden;
+    transition: width 0.3s;
 }
 
-.container {
-    background-color: #fff;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    width: 300px;
-    height: 100%;
-    overflow-y: auto;
-}
-
-.items-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-.input-field {
-    margin-bottom: 10px;
-    width: 100%;
-    padding: 5px;
-}
-
-.action-button {
-    margin-right: 5px;
-}
-
-.form-container {
+.drawer-header {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    padding: 16px;
+    color: #fff;
+    border-radius: 4px 4px 0 0;
 }
 
-#closeButton {
-    margin-top: auto;
+.drawer-header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.close-button {
+    font-size: 24px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-button:hover {
+    color: #ccc;
+}
+
+.drawer-content {
+    padding: 16px;
+    background-color: #f8f9fa;
+    border-radius: 0 0 4px 4px;
+}
+
+.drawer-content input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.drawer-content input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.drawer-button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-right: 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+#saveButton{
+    margin-top: 5px;
+}
+.drawer-button:hover{
+background-color: #0056b3;
 }
