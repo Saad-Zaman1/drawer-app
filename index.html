@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Drawer Demo</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <button id="openButton">Open Drawer</button>
     <div id="drawer" class="drawer">
-      <div id="container" class="container">
-        <h1>CRUD Container</h1>
-        <ul id="itemsList" class="items-list"></ul>
-        <div class="form-container">
-          <input
-            type="text"
-            id="inputField"
-            class="input-field"
-            placeholder="Enter text"
-          />
-          <button id="addButton" class="action-button">Add</button>
-          <button id="editButton" class="action-button">Edit</button>
-          <button id="deleteButton" class="action-button">Delete</button>
-          <button id="saveButton" class="action-button">Save</button>
-          <button id="closeButton" class="action-button">Close</button>
+      <div class="drawer-header">
+        <h2 class="drawer-title">Drawer</h2>
+        <button id="closeButton" class="close-button">&times;</button>
+      </div>
+      <div class="drawer-content">
+        <input
+          type="text"
+          id="inputField"
+          placeholder="Enter text..."
+          class="input-field"
+        />
+        <div class="button-container">
+          <button id="addButton" class="drawer-button">Add</button>
+          <button id="editButton" class="drawer-button">Edit</button>
+          <button id="deleteButton" class="drawer-button">Delete</button>
+          <button id="saveButton" class="drawer-button">Save</button>
         </div>
+        <ul id="itemsList" class="items-list"></ul>
       </div>
     </div>
+    <button id="openButton" class="open-button">Show Drawer</button>
     <script src="script.js"></script>
   </body>
 </html>
